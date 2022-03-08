@@ -5,15 +5,15 @@ heroku-buildpack-imagemagick-heif
 
 The rise in popularity and use of HEIF/HEIC(High Efficency Image Format) means your project's image processing also needs to be able to handle this format. The current default version of imagemagick installed on heroku:16 dynos is 6.8.9.9 and does not support processing heic image files. This [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) vendors a version of ImageMagick with HEIF support binaries into your project. It is based on several resources including https://github.com/retailzipline/heroku-buildpack-imagemagick-heif.
 
-The orginal buildpack was created for `heroku-18` stacks but this one was modified to work with [Heroku stack:](https://devcenter.heroku.com/articles/stack) `heroku-16` and `heroku-20`. 
+The orginal buildpack was created for `heroku-18` stacks but this one was modified to work with [Heroku stack:](https://devcenter.heroku.com/articles/stack) `heroku-20`.
 
-The tar file in the [/build folder](./build) currently contains: 
+The tar file in the [/build folder](./build) currently contains:
 
 You will need to build a new binary if you want to use a newer or different version. To build a new binary see [How to Build a New Binary](#how-to-build-a-new-binary)
 
 ## Versions
 
-This buildpack currently supports **Heroku 16** and **Heroku 20** and contains **ImageMagick 7.0.11-4 Q16 x86_64** https://imagemagick.org
+This buildpack currently supports **Heroku 20** and contains **ImageMagick 7.1.0-27 Q16 x86_64** https://imagemagick.org
 
 ## Usage
 
@@ -48,12 +48,6 @@ To re-build all the binaries, run:
 
 ```
 $ make build
-```
-
-To build the binary for a specific Heroku stack (for example, Heroku 16), run:
-
-```
-$ make build-heroku-16
 ```
 
 Check the [currently supported versions](#versions).
